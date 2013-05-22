@@ -1,5 +1,5 @@
 {
-  "name": "express-autoroute",
+  "name": "autoroute",
   "version": "0.1.0",
   "description": "Autorouter for express",
   "main": "index.js",
