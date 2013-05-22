@@ -1,6 +1,6 @@
 {
   "name": "autoroute",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Autorouter for express",
   "main": "index.js",
   "directories": {
