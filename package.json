@@ -21,5 +21,8 @@
   "author": "Tingan Ho",
   "license": "BSD",
   "readmeFilename": "README.md",
-  "gitHead": "fcd8d19fa86a074f6b97cc9dc818a9c707bae7f9"
+  "gitHead": "fcd8d19fa86a074f6b97cc9dc818a9c707bae7f9",
+  "dependencies": {
+    "grunt": "~0.4.1"
+  }
 }
