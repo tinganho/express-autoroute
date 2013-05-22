@@ -1,0 +1,25 @@
+{
+  "name": "express-autoroute",
+  "version": "0.0.0",
+  "description": "Autorouter for express",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tinganho/express-autoroute.git"
+  },
+  "keywords": [
+    "expressjs",
+    "router",
+    "autroute"
+  ],
+  "author": "Tingan Ho",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "fcd8d19fa86a074f6b97cc9dc818a9c707bae7f9"
+}
