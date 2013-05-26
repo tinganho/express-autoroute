@@ -1,18 +1,21 @@
 
-var grunt = require('grunt'),
-    path  = require('path');
+var glob = require('glob'),
+    path = require('path');
 
 module.exports = function(files, app) {
   var caller    = getCaller(),
       callerDir = path.dirname(caller.filename);
 
-  var _files =
-    grunt.file.expand({
-      cwd: callerDir,
-      filter: 'isFile'
-    },
-      files
+  var _files = [];
+  for(var i = 0; i<files.length; i++) {
+    _files = _files.concat(
+      glob.sync(
+        files[i],
+      {
+        cwd: callerDir
+      })
     );
+  }
 
   for(var i = 0; i < _files.length; i++) {
     require(path.join(callerDir, _files[i]))(app);
