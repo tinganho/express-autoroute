@@ -1,8 +1,16 @@
-express-autoroute
+Autoroute
 =================
 
-Express auto-route is a loads your express routes automatically.
+Autoroute loads your express routes automatically.
 
 
-Install it with 
+Install autoroute with:
+
+npm install autoroute --save
+
+
+
+
+
+
 
