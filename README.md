@@ -25,7 +25,7 @@ Install autoroute with:
 ```shell
 npm install autoroute --save
 ```
-Just use the autroute function and define a glob file pattern.
+Just use the autoroute function and define a glob file patterns.
 
 ```javascript
 var autoroute = require('autoroute');
