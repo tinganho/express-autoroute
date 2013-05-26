@@ -31,7 +31,7 @@ Just use the autoroute function and define a glob file patterns.
 var autoroute = require('autoroute');
 
 autoroute([
-  './**/*Api.js', //First parameter is an array of glob patterns
+  './**/*Api.js', //First parameter is an array of glob file patterns
   './**/*Page.js'
 ], app); // Second parameter is the express server
 ```
