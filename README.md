@@ -3,7 +3,7 @@ Autoroute
 
 Autoroute loads your express routes automatically.
 
-Let say that you have files, that end with Api, e.g. `testApi.js`, that defines an express route:
+Let say that you have files, that end with `*Api`, e.g. `testApi.js`, that defines an express route:
 ```javascript
 module.exports = function(app) {
   app.get('/test', function() {
@@ -11,7 +11,7 @@ module.exports = function(app) {
   });
 };
 ```
-Now you want to require all files that ends with Api.
+Now you want to require all files that ends with `*Api`.
 
 ```javascript
 require('/somepath1/test1Api')(app);
