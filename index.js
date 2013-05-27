@@ -8,13 +8,24 @@ module.exports = function(files, app) {
 
   var _files = [];
   for(var i = 0; i<files.length; i++) {
-    _files = _files.concat(
-      glob.sync(
+
+    if(files[i].substr(0, 1) !== '!') {
+      var adds = glob.sync(
         files[i],
       {
         cwd: callerDir
-      })
-    );
+      });
+      _files = _files.concat(adds);
+    } else {
+      var removes = glob.sync(
+        files[i].substr(1),
+      {
+        cwd: callerDir
+      });
+      _files = _files.filter(function(file) {
+        return removes.indexOf(file) === -1;
+      });
+    }
   }
 
   for(var i = 0; i < _files.length; i++) {
@@ -31,7 +42,7 @@ function getCaller() {
 
   // Return caller's caller
   return stack[1].receiver
-}
+};
 
 function getStack() {
   // Save original Error.prepareStackTrace
@@ -55,4 +66,4 @@ function getStack() {
   stack.shift() // getStack --> Error
 
   return stack
-}
+};
